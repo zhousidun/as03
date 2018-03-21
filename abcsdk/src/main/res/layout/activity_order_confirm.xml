@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="title"
+            type="java.lang.String"/>
+        <variable
+            name="cardNo"
+            type="java.lang.String"/>
+        <variable
+            name="accNoTitle"
+            type="java.lang.String"/>
+        <variable
+            name="money"
+            type="java.lang.String"/>
+        <variable
+            name="amtTitle"
+            type="java.lang.String"/>
+        <variable
+            name="btnText"
+            type="java.lang.String"/>
+        <variable
+            name="clicker"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@{title}"
+            android:textSize="25dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:text="@{accNoTitle+cardNo}"
+            android:textSize="18dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="可用金额: 99991234.99"
+            android:textSize="18dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorGray"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@{accNoTitle+money+`元`}"
+            android:textSize="18dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/btn_shape"
+            android:onClickListener="@{clicker}"
+            android:text="@{btnText}"
+            android:textColor="@color/colorWhite"
+            android:textSize="18dp"/>
+    </LinearLayout>
+</layout>
